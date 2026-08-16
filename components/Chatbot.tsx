@@ -345,7 +345,7 @@ export default function Chatbot() {
         <button
           onClick={handleToggle}
           type="button"
-          className="fixed top-40 right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center text-white shadow-xl bg-brand-800 hover:bg-brand-900 transition-all duration-300 transform hover:scale-105 relative cursor-pointer outline-none"
+          className="fixed top-[370px] right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center text-white shadow-xl bg-brand-800 hover:bg-brand-900 transition-all duration-300 transform hover:scale-105 cursor-pointer outline-none"
           aria-label="Toggle Help Chatbot"
         >
           {/* Chat bubbles Icon */}

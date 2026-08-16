@@ -8,14 +8,14 @@ import Chatbot from '@/components/Chatbot';
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-sans',
+  variable: '--font-inter',
 });
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
   display: 'swap',
-  variable: '--font-logo',
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {

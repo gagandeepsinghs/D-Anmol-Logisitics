@@ -42,7 +42,7 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+            <p className="text-sm text-slate-200 max-w-sm leading-relaxed">
               Providing premium and reliable Cab Bookings (local/outstation) and Tempo / Goods Transportation services across India. Dedicated to safety, speed, and absolute customer satisfaction.
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-slate-300 hover:text-white transition-colors outline-none focus:text-white"
+                  className="text-sm font-medium text-slate-200 hover:text-white transition-colors outline-none focus:text-white"
                 >
                   {link.label}
                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-red-500 uppercase tracking-widest">
               Get in Touch
             </h4>
-            <div className="flex flex-col gap-3 text-sm text-slate-300">
+            <div className="flex flex-col gap-3 text-sm font-medium text-slate-200">
               <div className="flex items-start gap-2.5">
                 {/* Phone Icon */}
                 <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -104,20 +104,20 @@ export default function Footer() {
       {/* Bottom half */}
       <div className="border-t border-slate-900 bg-navy-950 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-300">
             &copy; {currentYear} D Anmol Enterprises. All Rights Reserved.
           </p>
           <div className="flex items-center gap-5">
             {/* Social Icons Placeholders */}
-            <span className="text-xs text-slate-500 uppercase tracking-widest">Connect with us:</span>
+            <span className="text-xs text-slate-300 uppercase tracking-widest font-semibold">Connect with us:</span>
             <div className="flex items-center gap-3">
-              <a href="#" className="p-1.5 bg-slate-900 rounded-md text-slate-400 hover:text-white hover:bg-red-600 transition-colors" aria-label="Facebook">
+              <a href="#" className="p-2 bg-slate-800 rounded-lg text-slate-200 hover:text-white hover:bg-brand-orange-500 transition-all duration-300 transform hover:scale-105 shadow-xs" aria-label="Facebook">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
               </a>
-              <a href="#" className="p-1.5 bg-slate-900 rounded-md text-slate-400 hover:text-white hover:bg-red-600 transition-colors" aria-label="Twitter">
+              <a href="#" className="p-2 bg-slate-800 rounded-lg text-slate-200 hover:text-white hover:bg-brand-orange-500 transition-all duration-300 transform hover:scale-105 shadow-xs" aria-label="Twitter">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
               </a>
-              <a href="#" className="p-1.5 bg-slate-900 rounded-md text-slate-400 hover:text-white hover:bg-red-600 transition-colors" aria-label="LinkedIn">
+              <a href="#" className="p-2 bg-slate-800 rounded-lg text-slate-200 hover:text-white hover:bg-brand-orange-500 transition-all duration-300 transform hover:scale-105 shadow-xs" aria-label="LinkedIn">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </a>
             </div>

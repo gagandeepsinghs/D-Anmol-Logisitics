@@ -48,8 +48,8 @@
   --color-red-700: var(--color-brand-orange-700);
 
   /* Font overrides */
-  --font-sans: var(--font-sans), Arial, sans-serif;
-  --font-logo: var(--font-logo), var(--font-sans), sans-serif;
+  --font-sans: var(--font-inter), Arial, sans-serif;
+  --font-logo: var(--font-montserrat), var(--font-inter), sans-serif;
 
   /* Custom Animations */
   --animate-fadeIn: fadeIn 0.4s ease-out forwards;

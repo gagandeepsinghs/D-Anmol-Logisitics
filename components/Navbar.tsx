@@ -28,10 +28,26 @@ export default function Navbar() {
     return pathname.startsWith(path);
   };
 
+  const handleNavLinkClick = (href: string) => {
+    if (href.includes('#booking-section')) {
+      const tab = href.includes('tab=tempo') ? 'tempo' : href.includes('tab=cab') ? 'cab' : null;
+      
+      if (pathname === '/') {
+        const el = document.getElementById('booking-section');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        if (tab) {
+          window.dispatchEvent(new CustomEvent('change-booking-tab', { detail: tab }));
+        }
+      }
+    }
+  };
+
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Cab Service', href: '/#services-section' },
-    { label: 'Tempo Service', href: '/#services-section' },
+    { label: 'Cab Service', href: '/#booking-section?tab=cab' },
+    { label: 'Tempo Service', href: '/#booking-section?tab=tempo' },
     { label: 'About Us', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
@@ -68,6 +84,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
+                onClick={() => handleNavLinkClick(link.href)}
                 className={`text-base font-semibold transition-colors outline-none focus:text-red-600 hover:text-red-600
                   ${isActive(link.href) ? 'text-red-600' : 'text-slate-700'}`}
               >
@@ -86,6 +103,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/#booking-section"
+              onClick={() => handleNavLinkClick('/#booking-section')}
               className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-bold shadow-sm transition-colors outline-none focus:ring-2 focus:ring-red-400"
             >
               Book Now
@@ -146,7 +164,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  handleNavLinkClick(link.href);
+                }}
                 className={`block px-3 py-2.5 rounded-md text-base font-bold transition-colors
                   ${isActive(link.href) ? 'bg-red-50 text-red-600' : 'text-slate-700 hover:bg-slate-50 hover:text-navy-950'}`}
               >
@@ -163,7 +184,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/#booking-section"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  handleNavLinkClick('/#booking-section');
+                }}
                 className="w-full block text-center py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-base font-bold shadow-md transition-colors"
               >
                 Book Now

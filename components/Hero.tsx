@@ -45,7 +45,7 @@ export default function Hero() {
               Reliable <br />
               <span className="text-red-500">Cab & Small Trucks</span>
             </h1>
-            <p className="text-sm sm:text-base text-slate-350 max-w-xl leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed">
               Book passenger rides or small trucks for goods delivery. Professional drivers, secure transport, and premium service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
@@ -57,10 +57,10 @@ export default function Hero() {
               </Link>
               <a
                 href="tel:+919041687157"
-                className="px-8 py-3.5 border border-slate-700 hover:border-slate-500 hover:bg-slate-900 text-white rounded-lg text-sm font-bold text-center transition-colors cursor-pointer outline-none focus:ring-2 focus:ring-slate-700 flex items-center justify-center gap-2"
+                className="px-8 py-3.5 border border-white/20 hover:border-white/40 hover:bg-white/10 text-white rounded-lg text-sm font-bold text-center transition-colors cursor-pointer outline-none focus:ring-2 focus:ring-white/30 flex items-center justify-center gap-2"
               >
                 {/* Phone SVG Icon */}
-                <svg className="h-4 w-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Call Now
@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
             
             {/* Features Row */}
-            <div className="grid grid-cols-3 gap-6 border-t border-slate-800/80 pt-8 w-full mt-6 text-xs sm:text-sm text-slate-400 font-medium">
+            <div className="grid grid-cols-3 gap-6 border-t border-white/15 pt-8 w-full mt-6 text-xs sm:text-sm text-slate-200 font-medium">
               <div className="flex flex-col gap-1">
                 <span className="text-white font-bold text-lg leading-none">24/7</span>
                 <span>Availability</span>

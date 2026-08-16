@@ -328,18 +328,11 @@ export default function CabBookingForm() {
             onChange={(e) => handleInputChange('vehicleType', e.target.value)}
             className="px-4 py-2.5 rounded-lg border border-slate-300 text-slate-800 bg-white transition-all outline-none text-sm focus:border-navy-600 focus:ring-1 focus:ring-navy-600"
           >
-            <optgroup label="Passenger Cars & Vans">
-              <option value="hatchback">Hatchback (Alto, Nios, WagonR) - Economical</option>
-              <option value="sedan">Sedan (Dzire, Aura, Etios) - Comfortable</option>
-              <option value="suv">SUV (Ertiga, Innova) - Spacious</option>
-              <option value="premium">Premium Sedan/SUV - Luxury</option>
-              <option value="tempo">Tempo Traveller (12-20 Seater) - Group Travel</option>
-            </optgroup>
-            <optgroup label="Cargo Tempos & Pickups">
-              <option value="mahindra_supro">Mahindra Supro - Cargo/Luggage Pickup</option>
-              <option value="tata_ace">Tata Ace Gold - Cargo/Luggage Pickup</option>
-              <option value="pickup">Bolero Pickup - Cargo/Luggage Pickup</option>
-            </optgroup>
+            <option value="hatchback">Hatchback (Alto, Nios, WagonR) - Economical</option>
+            <option value="sedan">Sedan (Dzire, Aura, Etios) - Comfortable</option>
+            <option value="suv">SUV (Ertiga, Innova) - Spacious</option>
+            <option value="premium">Premium Sedan/SUV - Luxury</option>
+            <option value="tempo">Tempo Traveller (12-20 Seater) - Group Travel</option>
           </select>
           {errors.vehicleType && <span className="text-xs text-red-600 font-medium">{errors.vehicleType}</span>}
         </div>
@@ -360,11 +353,6 @@ export default function CabBookingForm() {
               ${errors.passengers ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-slate-300 focus:border-navy-600 focus:ring-1 focus:ring-navy-600'}`}
           />
           {errors.passengers && <span className="text-xs text-red-600 font-medium">{errors.passengers}</span>}
-          {['tata_ace', 'mahindra_supro', 'pickup'].includes(formData.vehicleType) && (
-            <span className="text-xs text-amber-600 font-semibold mt-1 flex items-center gap-1">
-              ⚠️ Note: Cargo Tempos only have cabin seating for up to 2 passengers.
-            </span>
-          )}
         </div>
 
         {/* Travel Date */}
