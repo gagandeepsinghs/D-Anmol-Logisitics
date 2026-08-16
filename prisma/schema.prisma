@@ -1,0 +1,41 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  phone     String?
+  password  String
+  role      String   @default("CUSTOMER")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Booking {
+  id                     String   @id @default(uuid())
+  bookingNumber          String   @unique
+  serviceType            String
+  customerName           String
+  customerPhone          String
+  customerEmail          String?
+  pickupLocation         String
+  dropLocation           String
+  vehicleType            String
+  bookingDate            DateTime
+  bookingTime            String
+  passengers             Int?
+  goodsType              String?
+  estimatedWeight        Float?
+  additionalRequirements String?
+  estimatedFare          Float?
+  status                 String   @default("PENDING")
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+}
