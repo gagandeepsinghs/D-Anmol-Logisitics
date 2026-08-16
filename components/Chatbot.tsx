@@ -207,7 +207,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="fixed top-24 right-6 z-50 flex flex-col items-end">
+    <div className="fixed top-32 right-6 z-50 flex flex-col items-end">
       {/* 1. Floating Circular Toggle Button */}
       <button
         onClick={handleToggle}
