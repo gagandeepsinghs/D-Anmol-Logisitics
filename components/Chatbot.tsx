@@ -207,38 +207,10 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="fixed top-40 right-6 z-50 flex flex-col items-end">
-      {/* 1. Floating Circular Toggle Button */}
-      <button
-        onClick={handleToggle}
-        type="button"
-        className={`h-14 w-14 rounded-full flex items-center justify-center text-white shadow-xl transition-all duration-300 transform hover:scale-105 relative cursor-pointer outline-none
-          ${isOpen ? 'bg-slate-700' : 'bg-brand-800 hover:bg-brand-900'}`}
-        aria-label="Toggle Help Chatbot"
-      >
-        {isOpen ? (
-          // Minimize Icon
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        ) : (
-          // Chat bubbles Icon
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        )}
-
-        {/* Orange notification badge */}
-        {!isOpen && unread && (
-          <span className="absolute -top-1 -right-1 flex h-5 w-11 items-center justify-center rounded-full bg-brand-orange-500 text-[8px] font-black tracking-wider uppercase px-1 border border-white animate-bounce shadow-sm">
-            Help
-          </span>
-        )}
-      </button>
-
-      {/* 2. Chat Window Container */}
-      {isOpen && (
-        <div className="flex flex-col w-[340px] sm:w-[380px] h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden mt-4 animate-fadeIn backdrop-blur-md">
+    <>
+      {isOpen ? (
+        /* Chat Window Container */
+        <div className="fixed top-24 right-6 z-50 flex flex-col w-[340px] sm:w-[380px] h-[500px] max-h-[calc(100vh-120px)] bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden animate-fadeIn backdrop-blur-md">
           {/* Header */}
           <div className="bg-brand-900 text-white p-4 flex items-center justify-between border-b border-brand-950">
             <div className="flex items-center gap-2.5">
@@ -368,7 +340,27 @@ export default function Chatbot() {
             </button>
           </form>
         </div>
+      ) : (
+        /* Floating Circular Toggle Button */
+        <button
+          onClick={handleToggle}
+          type="button"
+          className="fixed top-40 right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center text-white shadow-xl bg-brand-800 hover:bg-brand-900 transition-all duration-300 transform hover:scale-105 relative cursor-pointer outline-none"
+          aria-label="Toggle Help Chatbot"
+        >
+          {/* Chat bubbles Icon */}
+          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+
+          {/* Orange notification badge */}
+          {unread && (
+            <span className="absolute -top-1 -right-1 flex h-5 w-11 items-center justify-center rounded-full bg-brand-orange-500 text-[8px] font-black tracking-wider uppercase px-1 border border-white animate-bounce shadow-sm">
+              Help
+            </span>
+          )}
+        </button>
       )}
-    </div>
+    </>
   );
 }
