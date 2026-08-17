@@ -219,6 +219,7 @@ export default function Chatbot() {
                 alt="Logo"
                 width={30}
                 height={30}
+                style={{ width: 'auto' }}
                 className="h-7 w-auto bg-white p-0.5 rounded object-contain"
               />
               <div className="flex flex-col text-left">

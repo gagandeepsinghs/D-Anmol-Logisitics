@@ -40,6 +40,7 @@ export default function AdminSidebar() {
               alt="D-Anmol Enterprises Logo"
               width={42}
               height={42}
+              style={{ width: 'auto' }}
               className="h-10.5 w-auto object-contain bg-white p-0.5 rounded-md transition-transform duration-500 group-hover:scale-105"
             />
             <div className="flex flex-col justify-center border-l border-slate-800 pl-3 py-0.5">

@@ -70,23 +70,6 @@ export default function HomePage() {
           <BookingForm />
         </div>
       </section>
-      
-      {/* Call to Action Bar */}
-      <section className="bg-navy-950 text-white py-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-red-600/5 rotate-3 scale-110"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-black">Need custom booking or long-term contracts?</h3>
-            <p className="text-slate-400 text-xs sm:text-sm mt-1">Contact our corporate desk for dedicated vehicles and commercial rates.</p>
-          </div>
-          <a
-            href="tel:+919041687157"
-            className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition-colors shrink-0 shadow-md outline-none focus:ring-2 focus:ring-red-400"
-          >
-            Call Corporate Desk
-          </a>
-        </div>
-      </section>
     </div>
   );
 }

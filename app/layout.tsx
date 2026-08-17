@@ -69,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth`}>
       <body className="min-h-full flex flex-col bg-white text-slate-800 antialiased font-sans">
         <Navbar />
         <main className="flex-grow flex flex-col">

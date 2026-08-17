@@ -66,6 +66,7 @@ export default function Navbar() {
               alt="D-Anmol Enterprises Logo"
               width={48}
               height={48}
+              style={{ width: 'auto' }}
               className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
             <div className="flex flex-col justify-center border-l border-slate-200 pl-3.5 py-0.5">

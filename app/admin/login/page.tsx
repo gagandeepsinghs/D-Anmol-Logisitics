@@ -48,6 +48,7 @@ export default function AdminLoginPage() {
               alt="D-Anmol Enterprises Logo"
               width={64}
               height={64}
+              style={{ width: 'auto' }}
               className="h-16 w-auto object-contain transition-transform duration-500 hover:scale-105"
             />
             <div className="flex flex-col text-left border-l border-slate-200 pl-4 py-0.5">

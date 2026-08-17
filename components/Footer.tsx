@@ -31,6 +31,7 @@ export default function Footer() {
                 alt="D-Anmol Enterprises Logo"
                 width={48}
                 height={48}
+                style={{ width: 'auto' }}
                 className="h-12 w-auto object-contain bg-white p-1 rounded-lg transition-transform duration-500 group-hover:scale-105"
               />
               <div className="flex flex-col justify-center border-l border-slate-800 pl-3.5 py-0.5">
